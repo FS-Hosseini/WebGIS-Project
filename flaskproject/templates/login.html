@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}
+{% block head %}
+{{ super() }}
+<style>
+    blockquote{
+	border: 1px solid rgb(21, 231, 238);
+	text-align: center;
+	margin:auto;
+    width: 600px;
+}
+</style>
+{% endblock %}
+{% block content %}
+<form method="post">
+    <h3 align="center">Login</h3>
+    <div class="form-gp">
+        <label for = "UserName">User Name</label>
+        <input type="text" class="form-control" id="UserName" name="username" placeholder="Enter User Name" />
+
+    </div>
+    
+    <div class="form-gp">
+        <label for = "password">PassWord</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter PassWord" />
+
+    </div>
+    
+    <div>
+        <br />
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+</form>
+{% endblock %}
+{% block body %}
+    {{ super() }}
+    <br>
+    <blockquote>
+        <p>
+            <br>
+            If You Don't Sign Up ... Please Click <a href= "/Register" >Here
+            <br>
+        </p>
+
+    </blockquote>
+
+
+{% endblock %}
